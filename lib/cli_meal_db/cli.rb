@@ -1,11 +1,11 @@
 class CLI
 
-  def begin_app
+  def begin_app #calls the welcome method, then the get_meal_categories method
     self.welcome
     self.get_meal_categories
   end
 
-  def welcome
+  def welcome # welcomes the user
     puts "Welcome to mymealfinder!"
     sleep(3)
     puts "Ready to find a meal that's right for you?"
@@ -14,23 +14,16 @@ class CLI
     sleep(3)
   end
 
-  def get_meal_categories
-    #calls API method to get list of main ingredients
+  def get_meal_categories # grabs info from API, calls tge display_meal_categories method
     API.get_meal_categories
-    #binding.pry
     API.all_meal_categories
     self.display_meal_categories
   end
 
-  def display_meal_categories
+  def display_meal_categories # takes meal categories from API and puts into numbered list 
     API.all_meal_categories.each.with_index(1) do |ingredient, index|
-      #binding.pry
       puts index.to_s + '.) ' + ingredient
     end
   end
 
-  # to call an instance method we need instances or objects of the class
-  #def test # instance method
-  #  puts "Helloooo"
-  #end
 end
