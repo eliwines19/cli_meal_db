@@ -15,8 +15,9 @@ class CLI
   end
 
   def get_main_ingredient_list
-    binding.pry
+    #binding.pry
     #calls API method to get list of main ingredients
+    API.get_main_ingredient
   end
 
   # to call an instance method we need instances or objects of the class
