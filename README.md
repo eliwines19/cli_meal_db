@@ -1,8 +1,6 @@
 # CliMealDb
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/cli_meal_db`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Welcome to my MealOfTheDay app! What this app does chooses a completely random meal and gives you the name of the meal, category of the meal, area the meal is most popular, instructions on how to make the meal, ingredients, measurements, and even a youtube tutorial on how to make the meal!
 
 ## Installation
 
