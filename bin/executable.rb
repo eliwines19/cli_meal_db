@@ -3,4 +3,4 @@
 require_relative "../config/environment"
 
 
-CLI.new.begin_app
+CLI.new.call 
