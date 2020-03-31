@@ -12,6 +12,7 @@ class CLI
 
   def list_vegetarian_meals
     puts "Vegetarian Meals:"
+    sleep(1)
     @veg_meals = Meal.veg_meals
     @veg_meals.each do |meal|
       puts meal.name
@@ -22,7 +23,7 @@ class CLI
 
   def list_vegan_meals
     puts "Vegan meals:"
-    sleep(2)
+    sleep(1)
     @vegan_meals = Meal.vegan_meals
     @vegan_meals.each do |meal|
       puts meal.name
@@ -39,13 +40,15 @@ class CLI
   def main_menu
     input = nil
     while input != "exit"
-      sleep(2)
+      sleep(1)
       puts "------------------------------"
+      sleep(0.5)
       puts "Enter '1' for Vegetarian meals"
       sleep(0.5)
       puts "Enter '2' for Vegan meals"
       sleep(0.5)
       puts "Enter 'exit' to exit the app"
+      sleep(0.5)
       puts "------------------------------"
       input = gets.strip.downcase
 
