@@ -13,8 +13,8 @@ class CLI
   def list_vegetarian_meals
     puts "Vegetarian Meals:"
     @veg_meals = Meal.veg_meals
-    @veg_meals.each.with_index(1) do |meal|
-      puts "#{meal.name}"
+    @veg_meals.each do |meal|
+      puts meal.name
       puts ""
       sleep(1)
     end
@@ -24,8 +24,8 @@ class CLI
     puts "Vegan meals:"
     sleep(2)
     @vegan_meals = Meal.vegan_meals
-    @vegan_meals.each.with_index(1) do |meal|
-      puts "#{meal.name}"
+    @vegan_meals.each do |meal|
+      puts meal.name
       puts ""
       sleep(1)
     end
@@ -39,7 +39,7 @@ class CLI
   def main_menu
     input = nil
     while input != "exit"
-      sleep(0.5)
+      sleep(2)
       puts "------------------------------"
       puts "Enter '1' for Vegetarian meals"
       sleep(0.5)
