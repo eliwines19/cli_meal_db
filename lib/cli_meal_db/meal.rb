@@ -1,5 +1,5 @@
 class Meal
-  attr_accessor :name
+  attr_accessor :name, :image_url
 
   def self.veg_meals
     self.pull_veg_meals
@@ -24,15 +24,16 @@ class Meal
 
     meal = self.new
     meal.name = api['meals'].map {|hash| hash['strMeal']}
+    meal.image_url = api['meals'].map {|hash| hash['strMealThumb']}
 
     meal
   end
 
   def self.vegan_meals
-    self.pull_vegan_meals
+    self.pull_vegan_meal
   end
 
-  def self.pull_vegan_meals
+  def self.pull_vegan_meal
     vegan_meals = []
     vegan_meals << self.list_vegan_meals
   end
