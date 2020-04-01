@@ -9,47 +9,6 @@ class CLI
     puts "Welcome to the SmarterEatingHabits app!"
   end
 
-  def list_vegetarian_meals
-    puts "Vegetarian Meals:"
-    puts ""
-    sleep(1)
-    @veg_meals = Meal.veg_meals
-    @veg_meals.each do |meal|
-      meal.name.each.with_index(1) do |name, index|
-        puts "#{index}.) Name of Meal - #{name['strMeal']}"
-        puts "  Image of Meal - #{name['strMealThumb']}"
-        puts ""
-        sleep(0.5)
-      end
-    end
-  end
-
-  def list_vegan_meals
-    puts "Vegan meals:"
-    puts ""
-    sleep(1)
-    @vegan_meals = Meal.vegan_meals
-    @vegan_meals.each do |meal|
-      meal.name.each.with_index(1) do |name, index|
-        puts "#{index}.) Name of Meal - #{name['strMeal']}"
-        puts "  Image of Meal - #{name['strMealThumb']}"
-        puts ""
-        sleep(0.5)
-      end
-    end
-  end
-
-  def goodbye
-    puts ""
-    puts "Thanks for checking out the SmarterEatingHabits app! See you again soon!"
-    sleep(1)
-  end
-
-  def wrong_input
-    puts ""
-    puts "Not sure what you mean... try a different input!"
-  end
-
   def main_menu
     input = nil
     while input != "exit"
@@ -78,6 +37,47 @@ class CLI
         wrong_input
       end
     end
+  end
+
+  def list_vegetarian_meals
+    puts "Vegetarian Meals:"
+    puts ""
+    sleep(1)
+    veg_meals = Meal.veg_meals
+    veg_meals.each do |meal|
+      meal.name.each.with_index(1) do |name, index|
+        puts "#{index}.) Name of Meal - #{name['strMeal']}"
+        puts "  Image of Meal - #{name['strMealThumb']}"
+        puts ""
+        sleep(0.5)
+      end
+    end
+  end
+
+  def list_vegan_meals
+    puts "Vegan meals:"
+    puts ""
+    sleep(1)
+    vegan_meals = Meal.vegan_meals
+    vegan_meals.each do |meal|
+      meal.name.each.with_index(1) do |name, index|
+        puts "#{index}.) Name of Meal - #{name['strMeal']}"
+        puts "  Image of Meal - #{name['strMealThumb']}"
+        puts ""
+        sleep(0.5)
+      end
+    end
+  end
+
+  def goodbye
+    puts ""
+    puts "Thanks for checking out the SmarterEatingHabits app! See you again soon!"
+    sleep(1)
+  end
+
+  def wrong_input
+    puts ""
+    puts "Not sure what you mean... try a different input!"
   end
 
 end
