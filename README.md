@@ -1,6 +1,6 @@
 # CliMealDb
 
-Welcome to my MealOfTheDay app! What this app does chooses a completely random meal and gives you the name of the meal, category of the meal, area the meal is most popular, instructions on how to make the meal, ingredients, measurements, and even a youtube tutorial on how to make the meal!
+Welcome to my SmarterEatingHabits app! This app will show you a list of vegetarian ad vegan meals. These meals also have an image you can reference to find out what looks tasty to you! We hope you gain some ideas for foods and develop a smarter way to eat your food! #savetheanimals !!!
 
 ## Installation
 
@@ -18,9 +18,11 @@ Or install it yourself as:
 
     $ gem install cli_meal_db
 
-## Usage
+PLEASE MAKE SURE:
 
-TODO: Write usage instructions here
+    HTTParty has been installed by entering 'gem install httparty' in the terminal
+
+    THE CODE WONT WORK OTHERWISE!!
 
 ## Development
 
