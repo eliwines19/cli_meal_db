@@ -78,6 +78,7 @@ class CLI
   def wrong_input
     puts ""
     puts "Not sure what you mean... try a different input!"
+    sleep(1)
   end
 
 end
