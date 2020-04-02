@@ -43,7 +43,7 @@ class CLI
     puts "Vegetarian Meals:"
     puts ""
     sleep(1)
-    veg_meals = Meal.veg_meals
+    veg_meals = Meal.veg_meals_array
     veg_meals.each do |meal|
       meal.name.each.with_index(1) do |name, index|
         puts "#{index}.) Name of Meal - #{name['strMeal']}"
@@ -58,7 +58,7 @@ class CLI
     puts "Vegan meals:"
     puts ""
     sleep(1)
-    vegan_meals = Meal.vegan_meals
+    vegan_meals = Meal.vegan_meals_array
     vegan_meals.each do |meal|
       meal.name.each.with_index(1) do |name, index|
         puts "#{index}.) Name of Meal - #{name['strMeal']}"
