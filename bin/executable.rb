@@ -1,6 +1,6 @@
-#!/usr/bin/ruby
+#!/usr/bin/env ruby
 
-require_relative "../config/environment"
+require_relative '../lib/cli_meal_db'
 
 
 CLI.new.call
