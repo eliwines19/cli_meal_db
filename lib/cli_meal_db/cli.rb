@@ -2,6 +2,8 @@ class CLI
 
   def call
     welcome
+    API.get_vegan_meals
+    API.get_vegetarian_meals
     main_menu
   end
 
