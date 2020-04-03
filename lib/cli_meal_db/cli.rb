@@ -41,8 +41,8 @@ class CLI
     puts ""
     sleep(1)
     rando_meal = Meal.all
-    rando_meal.each do |hash|
-      puts "Name of meal: #{hash.name}"
+    rando_meal.each.with_index(1) do |hash, index|
+    puts "#{index}.) Name of meal: #{hash.name}"
       sleep(0.5)
       puts "Category of meal: #{hash.meal_category}"
       sleep(2)
@@ -76,6 +76,7 @@ class CLI
       elsif input == "3"
         print_meal_area
       elsif input == "main"
+        save_meal
         break
       else
         wrong_input
@@ -114,9 +115,33 @@ class CLI
     end
   end
 
+  def save_meal
+    input = nil
+    while input != "y"
+      puts ""
+      puts "Would you like to save this meal?"
+      puts ""
+      puts "Enter 'y' if you would like to save"
+      puts "Enter 'n' if you would not like to save"
+      input = gets.strip.downcase
+
+      if input == 'n'
+        Meal.destroy_all
+        break
+        main_menu
+        break
+      elsif input == "y"
+        break
+        main_menu
+      else
+        wrong_input
+      end
+    end
+  end
+
   def goodbye
     puts ""
-    puts "Thanks for checking out the SmarterEatingHabits app! See you again soon!"
+    puts "Thanks for checking out the Random Meal Generator! See you again soon!"
     sleep(1)
   end
 
