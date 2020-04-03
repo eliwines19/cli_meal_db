@@ -1,6 +1,16 @@
 class Meal
   attr_accessor :name, :image_url, :api_id, :meal_category, :meal_area, :meal_instructions
 
+  @@all = []
+
+  def save
+    @@all << self
+  end
+
+  def self.all
+    @@all
+  end
+
   def self.veg_meals_array
     veg_meals = []
     veg_meals << self.get_vegetarian_meals
