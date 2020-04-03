@@ -53,6 +53,7 @@ class CLI
   def meal_menu
     input = nil
     while input != "main"
+      puts "To find out more about this meal, please choose from the following:"
       puts ""
       sleep(0.5)
       puts "-----------------------------------------------"
@@ -107,8 +108,7 @@ class CLI
   def print_meal_area
     meal_info = Meal.all
     meal_info.each do |hash|
-      puts "#{hash.name} is commonly found in:"
-      puts "#{hash.meal_area}"
+      puts "#{hash.name} is typically found in #{hash.meal_area} areas"
       puts ""
       sleep(2)
     end
