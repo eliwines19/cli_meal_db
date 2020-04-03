@@ -2,8 +2,7 @@ class CLI
 
   def call
     welcome
-    API.get_vegan_meals
-    API.get_vegetarian_meals
+    API.get_random_meal
     main_menu
   end
 
@@ -18,11 +17,7 @@ class CLI
       sleep(0.5)
       puts "------------------------------"
       sleep(0.5)
-      puts "Enter '1' for Vegetarian meals"
-      sleep(0.5)
-      puts "Enter '2' for Vegan meals"
-      sleep(0.5)
-      puts "Enter '3' for all meals"
+      puts "Enter '1' for a random meal"
       sleep(0.5)
       puts "Enter 'exit' to exit the app"
       sleep(0.5)
@@ -31,11 +26,7 @@ class CLI
       input = gets.strip.downcase
 
       if input == "1"
-        list_vegetarian_meals
-      elsif input == "2"
-        list_vegan_meals
-      elsif input == "3"
-        list_all_meals
+        list_random_meal
       elsif input == "exit"
         goodbye
         break
@@ -45,49 +36,22 @@ class CLI
     end
   end
 
-  def list_vegetarian_meals
-    puts "Vegetarian Meals:"
+  def list_random_meal
+    puts "Here is a brand new meal for you to try!"
     puts ""
     sleep(1)
-    veg_meals = Meal.veg_meals_array
-    veg_meals.each do |meal_instance|
-      meal_instance.meals.each.with_index(1) do |meal, index|
-        puts "#{index}.) Name of Meal - #{meal['strMeal']}"
-        puts "  Image of Meal - #{meal['strMealThumb']}"
-        puts ""
-        sleep(0.5)
-      end
+    rando_meal = Meal.all
+    rando_meal.each do |hash|
+      puts "#{hash.name}"
+      sleep(0.5)
+      puts "#{hash.meal_category}"
+      meal_menu
     end
   end
 
-  def list_vegan_meals
-    puts "Vegan meals:"
-    puts ""
-    sleep(1)
-    vegan_meals = Meal.vegan_meals_array
-    vegan_meals.each do |meal_instance|
-      meal_instance.meals.each.with_index(1) do |meal, index|
-        puts "#{index}.) Name of Meal - #{meal['strMeal']}"
-        puts "  Image of Meal - #{meal['strMealThumb']}"
-        puts ""
-        sleep(0.5)
-      end
-    end
-  end
-
-  def list_all_meals
-    puts "All Vegan and Vegetarian Meals: "
-    puts ""
-    sleep(1)
-    all_meals = Meal.all_meals_array
-    all_meals.each do |meal_instance|
-      meal_instance.meals.each do |meal|
-        puts "Name of Meal - #{meal['strMeal']}"
-        puts " Image of Meal - #{meal['strMealThumb']}"
-        puts ""
-      end
-    end
-  end
+  # def meal_menu
+  #
+  # end
 
   def goodbye
     puts ""
