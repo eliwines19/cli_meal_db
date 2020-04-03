@@ -24,6 +24,10 @@ PLEASE MAKE SURE:
 
     THE CODE WONT WORK OTHERWISE!!
 
+## TODO:
+
+  Link to my github repo: https://github.com/eliwines19/cli_meal_db
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
