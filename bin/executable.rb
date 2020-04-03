@@ -1,6 +1,6 @@
-#!/usr/local/bin/ruby
+#!/usr/bin/ruby
 
 require_relative "../config/environment"
 
 
-CLI.new.call 
+CLI.new.call
