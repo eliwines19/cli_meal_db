@@ -126,7 +126,7 @@ class CLI
       input = gets.strip.downcase
 
       if input == 'n'
-        Meal.destroy_all
+        Meal.destroy_last_meal
         break
         main_menu
         break
