@@ -2,7 +2,6 @@ class CLI
 
   def call
     welcome
-    API.get_random_meal
     main_menu
   end
 
@@ -37,6 +36,7 @@ class CLI
   end
 
   def print_random_meal
+    API.get_random_meal
     puts "Here is a brand new meal for you to try!"
     puts ""
     sleep(1)
