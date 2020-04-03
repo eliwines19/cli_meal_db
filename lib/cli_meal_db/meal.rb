@@ -11,4 +11,8 @@ class Meal
     @@all
   end
 
+  def self.destroy_all
+    @@all.pop
+  end
+
 end
