@@ -20,6 +20,8 @@ class CLI
       sleep(0.5)
       puts "Enter '2' for Vegan meals"
       sleep(0.5)
+      puts "Enter '3' for all meals"
+      sleep(0.5)
       puts "Enter 'exit' to exit the app"
       sleep(0.5)
       puts "------------------------------"
@@ -30,6 +32,8 @@ class CLI
         list_vegetarian_meals
       elsif input == "2"
         list_vegan_meals
+      elsif input == "3"
+        list_all_meals
       elsif input == "exit"
         goodbye
         break
@@ -65,6 +69,20 @@ class CLI
         puts "  Image of Meal - #{name['strMealThumb']}"
         puts ""
         sleep(0.5)
+      end
+    end
+  end
+
+  def list_all_meals
+    puts "All Vegan and Vegetarian Meals: "
+    puts ""
+    sleep(1)
+    all_meals = Meal.all_meals_array
+    all_meals.each do |meal|
+      meal.name.each do |name|
+        puts "Name of Meal - #{name['strMeal']}"
+        puts " Image of Meal - #{name['strMealThumb']}"
+        puts ""
       end
     end
   end
