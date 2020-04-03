@@ -1,6 +1,6 @@
 # CliMealDb
 
-Welcome to my SmarterEatingHabits app! This app will show you a list of vegetarian ad vegan meals. These meals also have an image you can reference to find out what looks tasty to you! We hope you gain some ideas for foods and develop a smarter way to eat your food! #savetheanimals !!!
+Welcome to the Random Meal Generator! This app give you a random meal with its name, category, instructions, areas where it is popular, and even an image to go along with it! The goal of this app is to help those who are struggling trying to figure out what meal they would like to cook next, so stay open-minded and enjoy your meal!
 
 ## Installation
 
