@@ -48,10 +48,10 @@ class CLI
     puts ""
     sleep(1)
     veg_meals = Meal.veg_meals_array
-    veg_meals.each do |meal|
-      meal.name.each.with_index(1) do |name, index|
-        puts "#{index}.) Name of Meal - #{name['strMeal']}"
-        puts "  Image of Meal - #{name['strMealThumb']}"
+    veg_meals.each do |meal_instance|
+      meal_instance.meals.each.with_index(1) do |meal, index|
+        puts "#{index}.) Name of Meal - #{meal['strMeal']}"
+        puts "  Image of Meal - #{meal['strMealThumb']}"
         puts ""
         sleep(0.5)
       end
@@ -63,10 +63,10 @@ class CLI
     puts ""
     sleep(1)
     vegan_meals = Meal.vegan_meals_array
-    vegan_meals.each do |meal|
-      meal.name.each.with_index(1) do |name, index|
-        puts "#{index}.) Name of Meal - #{name['strMeal']}"
-        puts "  Image of Meal - #{name['strMealThumb']}"
+    vegan_meals.each do |meal_instance|
+      meal_instance.meals.each.with_index(1) do |meal, index|
+        puts "#{index}.) Name of Meal - #{meal['strMeal']}"
+        puts "  Image of Meal - #{meal['strMealThumb']}"
         puts ""
         sleep(0.5)
       end
@@ -78,10 +78,10 @@ class CLI
     puts ""
     sleep(1)
     all_meals = Meal.all_meals_array
-    all_meals.each do |meal|
-      meal.name.each do |name|
-        puts "Name of Meal - #{name['strMeal']}"
-        puts " Image of Meal - #{name['strMealThumb']}"
+    all_meals.each do |meal_instance|
+      meal_instance.meals.each do |meal|
+        puts "Name of Meal - #{meal['strMeal']}"
+        puts " Image of Meal - #{meal['strMealThumb']}"
         puts ""
       end
     end
