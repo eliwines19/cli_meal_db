@@ -7,7 +7,6 @@ class API
       meal = Meal.new
       meal.name = hash['strMeal']
       meal.image_url = hash['strMealThumb']
-      meal.api_id = hash['idMeal']
       meal.meal_category = hash['strCategory']
       meal.meal_instructions = hash['strInstructions']
       meal.meal_area = hash['strArea']
