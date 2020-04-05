@@ -106,34 +106,28 @@ class CLI
     end
 
       def print_meal_instructions
-        meal_info = Meal.all
-        meal_info.each do |hash|
-          puts "#{hash.name} Instructions:"
-          sleep(1)
-          puts "#{hash.meal_instructions}"
-          puts ""
-          sleep(2)
-        end
+        meal_info = Meal.all.last
+        puts "#{meal_info.name} Instructions:"
+        sleep(1)
+        puts "#{meal_info.meal_instructions}"
+        puts ""
+        sleep(2)
       end
 
       def print_meal_image
-        meal_info = Meal.all
-        meal_info.each do |hash|
-          puts "#{hash.name} Image Link:"
-          sleep(1)
-          puts "#{hash.image_url}"
-          puts ""
-          sleep(2)
-        end
+        meal_info = Meal.all.last
+        puts "#{meal_info.name} Image Link:"
+        sleep(1)
+        puts "#{meal_info.image_url}"
+        puts ""
+        sleep(2)
       end
 
       def print_meal_area
-        meal_info = Meal.all
-        meal_info.each do |hash|
-          puts "#{hash.name} is typically found in #{hash.meal_area} areas"
-          puts ""
-          sleep(2)
-        end
+        meal_info = Meal.all.last
+        puts "#{meal_info.name} is typically found in #{meal_info.meal_area} areas"
+        puts ""
+        sleep(2)
       end
 
       def save_meal
